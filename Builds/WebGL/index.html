@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | solar system simulation</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 960px; height: 600px; background: #231F20"></canvas>
+    <script src="Build/solar_system2.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/solar_system2.data",
+        frameworkUrl: "Build/solar_system2.framework.js",
+        codeUrl: "Build/solar_system2.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "solar system simulation",
+        productVersion: "0.1",
+      });
+    </script>
+	<p>Created By Chenade Kuo (TW)</p>
+	<p>Wait for 10 sec to see the solar system with actual speed</p>
+  </body>
+</html>
